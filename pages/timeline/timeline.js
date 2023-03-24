@@ -88,7 +88,7 @@ export default () => {
 
     modalContainer.innerHTML = `
     <div class="modal">
-    <p>oi</p>
+    <p>oi!</p>
     </div>`;
 
     modalContainer.classList.add('show');
