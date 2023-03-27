@@ -1,10 +1,11 @@
 /* eslint-disable */
-import { signIn, loginGoogle, authStateChanged, userLogged  } from '../../firebase/auth.js';
-import { showErrorMessage } from '../errorHandling.js';
+import { signIn, loginGoogle  } from '../../firebase/auth.js';
+
 
 export default () => {
+
   const container = document.createElement('div');
-  container.classList.add('container');
+  container.classList.add('container');  
 
   const template = `
     <div class= "form-wrapper">
@@ -99,5 +100,3 @@ export default () => {
 
   return container;
 };
-
-authStateChanged();
