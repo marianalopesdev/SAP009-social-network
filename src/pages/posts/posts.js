@@ -12,8 +12,14 @@ export function openCreateNewPostModal() {
   modalContainer.innerHTML = `    
   <div class="modal-content">  
    <div class = "top-content">
+   <div class="div-question">
     <p class="greeting-modal">O que você busca/oferece hoje?</p>   
-    <button class="buttons" id="close">X</button>
+    </div>
+    <div class="div-modal-close">
+    <button class="buttons" id="modal-close-icon"><span class="material-icons close-modal">
+    close
+    </span></button>
+    </div>
    </div>
    <div class="form">
     <form>
@@ -33,7 +39,7 @@ export function openCreateNewPostModal() {
   </div>`;
 
   modalWrapper.classList.add('show');
-  const close = document.getElementById('close');
+  const close = document.getElementById('modal-close-icon');
   close.addEventListener('click', () => {
     modalWrapper.classList.remove('show');
   });
@@ -75,9 +81,15 @@ export async function editPost(post) {
   modalContainer.innerHTML = `    
     <div class="modal-content">  
       <div class = "top-content">
-        <p class="greeting-modal">Editar Post</p>   
-        <button class="buttons" id="close">X</button>
+      <div class="div-question">
+      <p class="greeting-modal">Editar Post</p>   
       </div>
+      <div class="div-modal-close">
+      <button class="buttons" id="modal-edit-close-icon"><span class="material-icons close-modal">
+      close
+      </span></button>
+      </div>
+     </div>
     <div class="form">
      <form>
       <input type='text' name='post-title' class='edit-input-post-title' id='edit-post-title'> 
@@ -99,7 +111,7 @@ export async function editPost(post) {
   editPostTitle.focus();
 
   modalWrapper.classList.add('show');
-  const close = document.getElementById('close');
+  const close = document.getElementById('modal-edit-close-icon');
   close.addEventListener('click', () => {
     modalWrapper.classList.remove('show');
   });

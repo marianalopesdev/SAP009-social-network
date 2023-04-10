@@ -24,10 +24,16 @@ export default () => {
     <div class="form-wrapper-timeline">
        <div>        
        <div class="div-name-button">
-          <p class="greeting">Olá,</p> 
+      
           <div class="div-greeting-button">
-            <p class="greeting-name">${user.displayName}</p>
-            <img src="./assets/bt-new-post.png" id="btn-new-post" class="" alt="logo da ConectAda">
+          <div class="div-hello">
+          <p class="greeting">Olá,</p> 
+          <p class="greeting-name">${user.displayName}</p>
+          </div>
+          <div id="btn-new-post" class="bh" alt="logo da ConectAda">
+           
+            
+            </div>
           </div>
           </div>
           <div class="timeline-content">

@@ -8,7 +8,10 @@ export default () => {
     <div class="div-logo-timeline">
       <img src="./assets/logo-horizontal.png" id="ada-logo-timeline" class="logo-image-timeline" alt="logo da ConectAda">
     </div>
+    
     <nav role="navigation">
+    <div class="menu-links"><p>links</p>
+    </div>
     <div id="menuToggle">
      
       <input type="checkbox" />
@@ -34,6 +37,31 @@ export default () => {
   `;
 
   headerContent.innerHTML += template;
+
+   const menuToggle = headerContent.querySelector('#menuToggle');
+  const menu = headerContent.querySelector('.menu-links');
+  
+  if (window.innerWidth > 768) {
+    menu.classList.add('display');
+    menuToggle.classList.add("no-display");
+   } 
+
+
+  // Verifica a largura da tela quando a página carrega e adiciona ou remove a classe "hide-menu" conforme necessário
+   
+  // window.addEventListener('resize', () => {
+  //   if (window.innerWidth > 768) {
+  //     menuToggle.classList.remove("display");
+  //     menuToggle.classList.add("no-display");
+     
+  //   } else {
+  //     menuToggle.classList.remove("no-display");
+  //     menuToggle.classList.add("display");
+  //     menu.classList.remove("display");
+  //     menu.classList.add("no-display");
+      
+  //   }
+  // });
 
   document.body.addEventListener('click', () => {
     const link = document.getElementById('menu-sair');
