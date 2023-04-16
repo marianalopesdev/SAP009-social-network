@@ -6,10 +6,8 @@
 * [2. Resumo do projeto](#2-resumo-do-projeto)
 * [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
 * [4. Considerações gerais](#4-considerações-gerais)
-* [5. Critérios de aceitação mínimos do
-  projeto](#5-criterios-de-aceitação-mínimos-do-projeto)
-
-* [7. Entrega](#7-entrega)
+* [5. Produto](#5-produto)
+* [6. Entrega](#6-entrega)
 
 
 ***
@@ -53,7 +51,6 @@ qual fosse possível **ler e escrever dados**.
 ## 3. Objetivos de aprendizagem
 
 O projeto foi realizado usando HTML semântico, CSS e Javascript. O site foi feito usando flexbox.
-
 Alguns dos objetivos de apredizagem atingidos no processo:
 
 ### Web APIs
@@ -150,8 +147,7 @@ e a assertividade.
 
 
 ### 5.2 Histórias de usuário
-
- - História 1: A usuária quer conhecer e acessar a rede social via telefone celular 
+**História 1:** A usuária quer conhecer e acessar a rede social via telefone celular 
  e para isso precisa se registrar no site. 
  Duas opções devem ser oferecidas: email e senha de qualquer provedor ou usando os dados do Google.
  Definição de pronto: Conseguir criar um usuário, logar com e-mail e senha ou com as credenciais
@@ -170,7 +166,7 @@ e a assertividade.
   Testes de usabilidade devem ser executados e bugs corrigidos.
   O protótipo de alta fidelidade para as página de login e registro versão mobile devem estar prontos.
 
- - História 2: A usuária quer buscar e oferecer dicas para as colegas desenvolvedoras através de uma postagem
+**História 2:** A usuária quer buscar e oferecer dicas para as colegas desenvolvedoras através de uma postagem
  com título.  Para isso ela precisa de campos para inserção de dados e um botão 
  para enviar essa postagem para o banco de dados Firestore. Precisa também que a timeline exiba todos os 
  posts de todas as usuárias.
@@ -185,8 +181,8 @@ e a assertividade.
   Os testes unitários e assíncronos para as funções de criar post deve estar criado.
   Testes de usabilidade devem ser executados e bugs corrigidos.
   O protótipo de alta fidelidade para a timeline principal deve estar pronto.
-
- - História 3: A usuária quer editar ou apagar as postagens que criou.
+  
+**História 3:** A usuária quer editar ou apagar as postagens que criou.
  Definição de pronto: Conseguir editar ou apagar uma postagem criada anteriormente. 
  Fazer o update ou delete no banco de  dados do Firebase. 
  Mensagens de erro devem aparecer quando os seguintes critérios não forem preenchidos:
@@ -197,10 +193,10 @@ e a assertividade.
   Testes de usabilidade devem ser executados e bugs corrigidos.
   O protótipo de alta fidelidade para o modal de edição e confirmação de exclusão devem estar prontos.
 
- - História 4: A usuária quer ver apenas as postagens que criou.
+**História 4:** A usuária quer ver apenas as postagens que criou.
  Definição de pronto: Exibir timeline apenas com os posts da usuária.
   
-  - História 5: A usuária quer curtir as postagens que tem interesse.
+**História 5:** A usuária quer curtir as postagens que tem interesse.
  Definição de pronto: Conseguir curtir e descutir uma postagem. O documento da coleção users 
  recebe o id dos posts que curte. O documento da coleção posts recebe o id do usuário que curtiu e
  adiciona à array de curtidas.
@@ -208,30 +204,15 @@ e a assertividade.
   Os testes unitários e assíncronos para as funções de like e deslike devem estar criados.
   Testes de usabilidade devem ser executados e bugs corrigidos.
 
- - História 6: A usuária quer ver as postagens que curtiu.
+**História 6:** A usuária quer ver as postagens que curtiu.
  Definição de pronto: Exibir uma timeline com os itens curtidos pela usuária, em ordem de curtida.
  Testes de usabilidade devem ser executados e bugs corrigidos.
  
-  - História 6: A usuária quer utilizar o site na versão desktop.
+ **História 7:** A usuária quer utilizar o site na versão desktop.
  Definição de pronto: Exibir o site configurado para a versão desktop.
  Testes de usabilidade devem ser executados e bugs corrigidos.
  
- 
-
-Depois de entender as necessidades de seus usuários, escreva as Histórias de
-Usuário. Elas representam tudo o que ele precisa fazer/ver na Rede Social.
-Cada uma de suas histórias de usuário deve possuir:
-
-* **Critérios de aceitação:** tudo o que deve acontecer para satisfazer as
-  necessidades do usuário.
-
-* **Definição de pronto:** todos os aspectos técnicos que devem ser atendidos
-  para que, como equipe, saibam que essa história está finalizada e pronta para
-  ser publicada. **Todas** suas histórias de usuário (com exceções), devem
-  incluir esses aspectos em sua definição de pronto (além de tudo o que precisa
-  adicionar):
-
-  
+   
   - xxxxxReceber _code review_ de pelo menos uma parceira de outra equipe.
   
   - xxxxxFazer deploy do aplicativo e marcar a versão (git tag).
@@ -312,7 +293,7 @@ H.U.:
 * Faça sessões de teste de usabilidade com o produto em HTML.
 
 
-## 7. Entrega
+## 6. Entrega
 
 O projeto será entregue subindo seu código no GitHub (`commit` /`push`) e a
 interface será exibida usando páginas do GitHub ou outro serviço de hospedagem
