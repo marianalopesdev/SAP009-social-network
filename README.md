@@ -31,343 +31,149 @@ determinadas tags ou popularidade, mais recente ou mais comentado.
 
 ## 2. Resumo do projeto
 
-Neste projeto você construirá uma Rede Social sobre o que você e sua equipe
-decidirem. Pode ser, por exemplo, sobre alimentação saudável, feminismo,
-educação, saúde, energias renováveis, amantes das
-[Empanadas](https://pt.wikipedia.org/wiki/Empanada), de
-[Tacos](https://pt.wikipedia.org/wiki/Taco_(culin%C3%A1ria)), de
-[Feijoada](https://pt.wikipedia.org/wiki/Feijoada), ou do que seja.
+Neste projeto construí uma Rede Social com o objetivo de conectar mulheres 
+desenvolvedoras em um ambiente seguro de fortalecimento, amizade e informações.
 
-Sua Rede Social terá que permitir à qualquer usuário criar uma conta de acesso,
-logar-se com ela, criar, editar, deletar e dar _likes_ em publicações.
+O nome da rede social é ConectAdas, fazendo referência a Ada Lovelace e 
+a inspiração que ela desperta em nós.
 
-O objetivo principal de aprendizagem deste projeto é construir uma [Single-page
+Na ConectADAS é possível:
+- criar uma conta de acesso e logar com essa conta
+- criar, editar, deletar e dar like/dislike em publicações
+- ver 3 versões da linha do tempo:
+  - publicações de todas as pessoas;
+  - publicações próprias;
+  - publicações curtidas.
+
+O objetivo principal de aprendizagem deste projeto era construir uma [Single-page
 Application
 (SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)
 [_responsiva_](https://curriculum.laboratoria.la/pt/topics/css/02-responsive) (com mais de uma tela/ página) na
-qual seja possível **ler e escrever dados**.
+qual fosse possível **ler e escrever dados**.
 
 ## 3. Objetivos de aprendizagem
 
-Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projeto. Pense nisso para decidir sua estratégia de trabalho.
+O projeto foi realizado usando HTML semântico, CSS e Javascript. O site foi feito usando flexbox.
 
-### HTML
-
-- [ ] **Uso de HTML semântico**
-
-  <details><summary>Links</summary><p>
-
-  * [HTML semântico](https://curriculum.laboratoria.la/pt/topics/html/02-html5/02-semantic-html)
-  * [Semantics in HTML - MDN](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
-
-### CSS
-
-- [ ] **Uso de seletores de CSS**
-
-  <details><summary>Links</summary><p>
-
-  * [Intro a CSS](https://curriculum.laboratoria.la/pt/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/pt_BR/docs/Web/CSS/CSS_Selectors)
-</p></details>
-
-- [ ] **Modelo de caixa (box model): borda, margem, preenchimento**
-
-  <details><summary>Links</summary><p>
-
-  * [Modelo de Caixa e Display](https://curriculum.laboratoria.la/pt/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
-
-- [ ] **Uso de flexbox em CSS**
-
-  <details><summary>Links</summary><p>
-
-  * [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  * [Flexbox Froggy](https://flexboxfroggy.com/#pt-br)
-  * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-</p></details>
-
-- [ ] **Uso de CSS Grid Layout**
-
-  <details><summary>Links</summary><p>
-
-  * [A Complete Guide to Grid - CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
-  * [Grids - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids)
-</p></details>
+Alguns dos objetivos de apredizagem atingidos no processo:
 
 ### Web APIs
 
-- [ ] **Uso de seletores de DOM**
+- **Uso de seletores de DOM**
 
-  <details><summary>Links</summary><p>
+- **Manipulação de eventos de DOM (listeners, propagação, delegação)**
 
-  * [Modificando o DOM](https://curriculum.laboratoria.la/pt/topics/browser/02-dom/03-1-dom-methods-selection)
-  * [Introdução ao DOM - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
-  * [Locating DOM elements using selectors - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-</p></details>
+- **Manipulação dinâmica de DOM**
 
-- [ ] **Manipulação de eventos de DOM (listeners, propagação, delegação)**
-
-  <details><summary>Links</summary><p>
-
-  * [Introdução a eventos - MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-  * [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener)
-  * [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/removeEventListener)
-  * [Objeto Event](https://developer.mozilla.org/pt-BR/docs/Web/API/Event)
-</p></details>
-
-- [ ] **Manipulação dinâmica de DOM**
-
-  <details><summary>Links</summary><p>
-
-  * [Introdução ao DOM](https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM/Introdu%C3%A7%C3%A3o)
-  * [Node.appendChild() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Node/appendChild)
-  * [Document.createElement() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Document/createElement)
-  * [Document.createTextNode()](https://developer.mozilla.org/pt-BR/docs/Web/API/Document/createTextNode)
-  * [Element.innerHTML - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Element/innerHTML)
-  * [Node.textContent - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Node/textContent)
-</p></details>
-
-- [ ] **Routing (History API, evento hashchange, window.location)**
-
-  <details><summary>Links</summary><p>
-
-  * [Manipulando o histórico do navegador - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/History_API)
-</p></details>
+- **Routing (History API, evento hashchange, window.location)**
 
 ### JavaScript
 
-- [ ] **Arrays (arranjos)**
-
-  <details><summary>Links</summary><p>
-
-  * [Arranjos](https://curriculum.laboratoria.la/pt/topics/javascript/04-arrays)
-  * [Array - MDN](https://developer.mozilla.org//pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/)
-  * [Array.prototype.sort() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  * [Array.prototype.forEach() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  * [Array.prototype.map() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  * [Array.prototype.filter() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  * [Array.prototype.reduce() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-</p></details>
-
-- [ ] **Objetos (key, value)**
-
-  <details><summary>Links</summary><p>
-
-  * [Objetos em JavaScript](https://curriculum.laboratoria.la/pt/topics/javascript/05-objects/01-objects)
-</p></details>
-
-- [ ] **Diferenciar entre tipos de dados primitivos e não primitivos**
-
-- [ ] **Variáveis (declaração, atribuição, escopo)**
-
-  <details><summary>Links</summary><p>
-
-  * [Valores, tipos de dados e operadores](https://curriculum.laboratoria.la/pt/topics/javascript/01-basics/01-values-variables-and-types)
-  * [Variáveis](https://curriculum.laboratoria.la/pt/topics/javascript/01-basics/02-variables)
-</p></details>
-
-- [ ] **Uso de condicionais (if-else, switch, operador ternário, lógica booleana)**
-
-  <details><summary>Links</summary><p>
-
-  * [Estruturas condicionais e repetitivas](https://curriculum.laboratoria.la/pt/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  * [Tomando decisões no seu código — condicionais - MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
-
-- [ ] **Uso de laços (while, for, for..of)**
-
-  <details><summary>Links</summary><p>
-
-  * [Laços (Loops)](https://curriculum.laboratoria.la/pt/topics/javascript/02-flow-control/02-loops)
-  * [Laços e iterações - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration)
-</p></details>
-
-- [ ] **Funções (params, args, return)**
-
-  <details><summary>Links</summary><p>
-
-  * [Funções (controle de fluxo)](https://curriculum.laboratoria.la/pt/topics/javascript/02-flow-control/03-functions)
-  * [Funções clássicas](https://curriculum.laboratoria.la/pt/topics/javascript/03-functions/01-classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/pt/topics/javascript/03-functions/02-arrow)
-  * [Funções — blocos reutilizáveis de código - MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
-
-- [ ] **Testes unitários (unit tests)**
-
-  <details><summary>Links</summary><p>
-
-  * [Introdução ao Jest - Documentação oficial](https://jestjs.io/docs/pt-BR/getting-started)
-</p></details>
-
-- [ ] **Testes assíncronos**
-
-  <details><summary>Links</summary><p>
-
-  * [Testando Código Assíncrono - Documentação oficial](https://jestjs.io/docs/pt-BR/asynchronous)
-</p></details>
-
+- **Arrays (arranjos)**
+- **Objetos (key, value)**
+- **Diferenciar entre tipos de dados primitivos e não primitivos**
+- **Variáveis (declaração, atribuição, escopo)**
+- **Uso de condicionais (if-else, switch, operador ternário, lógica booleana)**
+- **Uso de laços (while, for, for..of)**
+- **Funções (params, args, return)**
+- **Testes unitários (unit tests)**
+- **Testes assíncronos**
 - [ ] **Uso de mocks e espiões**
-
   <details><summary>Links</summary><p>
 
   * [Simulações Manuais - Documentação oficial](https://jestjs.io/docs/pt-BR/manual-mocks)
 </p></details>
 
-- [ ] **Módulos de ECMAScript (ES modules)**
-
-  <details><summary>Links</summary><p>
-
-  * [import - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
-
+- **Módulos de ECMAScript (ES modules)**
 - [ ] **Uso de linter (ESLINT)**
-
-- [ ] **Uso de identificadores descritivos (Nomenclatura e Semântica)**
-
-- [ ] **Diferença entre expressões (expressions) e declarações (statements)**
-
-- [ ] **Callbacks**
-
-  <details><summary>Links</summary><p>
-
-  * [Função Callback - MDN](https://developer.mozilla.org/pt-BR/docs/Glossario/Callback_function)
-</p></details>
-
-- [ ] **Promessas**
-
-  <details><summary>Links</summary><p>
-
-  * [Promise - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-  * [How to Write a JavaScript Promise - freecodecamp (em inglês)](https://www.freecodecamp.org/news/how-to-write-a-javascript-promise-4ed8d44292b8/)
-</p></details>
+- **Uso de identificadores descritivos (Nomenclatura e Semântica)**
+- **Diferença entre expressões (expressions) e declarações (statements)**
+- **Callbacks**
+- **Promessas**
 
 ### Controle de Versões (Git e GitHub)
 
-- [ ] **Git: Instalação e configuração**
-
-- [ ] **Git: Controle de versão com git (init, clone, add, commit, status, push, pull, remote)**
-
-- [ ] **Git: Integração de mudanças entre ramos (branch, checkout, fetch, merge, reset, rebase, tag)**
-
+- **Git: Instalação e configuração**
+- **Git: Controle de versão com git (init, clone, add, commit, status, push, pull, remote)**
+- **Git: Integração de mudanças entre ramos (branch, checkout, fetch, merge, reset, rebase, tag)**
 - [ ] **GitHub: Criação de contas e repositórios, configuração de chave SSH**
-
 - [ ] **GitHub: Implantação com GitHub Pages**
-
-  <details><summary>Links</summary><p>
-
-  * [Site oficial do GitHub Pages](https://pages.github.com/)
-</p></details>
-
-- [ ] **GitHub: Colaboração pelo Github (branches | forks | pull requests | code review | tags)**
-
+- **GitHub: Colaboração pelo Github (branches | forks | pull requests | code review | tags)**
 - [ ] **GitHub: Organização pelo Github (projects | issues | labels | milestones | releases)**
-
+- [ ] 
 ### Centrado no usuário
 
-- [ ] **Desenhar e desenvolver um produto ou serviço colocando as usuárias no centro**
+- **Desenhar e desenvolver um produto ou serviço colocando as usuárias no centro**
 
 ### Design de produto
 
-- [ ] **Criar protótipos para obter feedback e iterar**
+- **Criar protótipos para obter feedback e iterar**
 
-- [ ] **Aplicar os princípios de desenho visual (contraste, alinhamento, hierarquia)**
+- **Aplicar os princípios de desenho visual (contraste, alinhamento, hierarquia)**
 
 ### Pesquisa
 
-- [ ] **Planejar e executar testes de usabilidade**
+- **Planejar e executar testes de usabilidade**
 
 ### Firebase
 
-- [ ] **Firebase Auth**
+-  **Firebase Auth**
+-  **Firestore**
 
-  <details><summary>Links</summary><p>
-
-  * [Primeiros passos com o Firebase Authentication em sites - Documentação oficial](https://firebase.google.com/docs/auth/web/start?hl=pt-BR)
-  * [Gerenciar usuários no Firebase (onAuthStateChanged) - Documentação oficial](https://firebase.google.com/docs/auth/web/manage-users?hl=pt-BR)
-</p></details>
-
-- [ ] **Firestore**
-
-  <details><summary>Links</summary><p>
-
-  * [Firestore - Documentação oficial](https://firebase.google.com/docs/firestore?hl=pt-BR)
-  * [Regras de segurança do Firebase - Documentação oficial](https://firebase.google.com/docs/rules?hl=pt-BR)
-  * [Receber atualizações em tempo real com o Cloud Firestore - Documentação oficial](https://firebase.google.com/docs/firestore/query-data/listen?hl=pt-BR)
-</p></details>
 
 ## 4. Considerações gerais
 
-* Este projeto deve ser desenvolvido em trios.
+* Este projeto foi desenvolvido individualmente.
 
-* O intervalo de tempo estimado para concluir o projeto é de 4 a 5 Sprints.
+* Este projeto foi concluído em 5 semanas.
 
-* A lógica do projeto deve estar implementada completamente em JavaScript
-  (ES6+), HTML e CSS :smiley:. Para este projeto **não está permitido** o uso de
+* A lógica do projeto está implementada completamente em JavaScript
+  (ES6+), HTML e CSS. Não foi permitido o uso de
   _frameworks_ ou bibliotecas de CSS e JS.
 
-* A divisão e organização do trabalho deve permitir, sem exceção, que **cada
-  integrante** da equipe pratique a aprendizagem de tudo que está envolvido em
-  **cada história**. _Não dividam o trabalho como em uma fábrica._
+* Separei um dia da semana (sexta-feira) exclusivamente para ajudar colegas em dificuldade - 
+e aprendi muito ao dar explicações. Ajudei colegas em outros dias também.
 
-* Está avançando em seus projetos com alguma fluidez e sem grandes problemas?
-  Seja generosa com suas parceiras, deixe-as aprender e praticar sem restrições,
-  mesmo que demore um pouco mais. Aproveite para _mentorá-las_, para fazer _pair
-  programming_. Uma das melhores formas de aprender é explicar verbalmente.
 
-* Está sentindo dificuldade e para você é mais difícil de avançar? Não fique com
-  as partes "fáceis" do projeto. Converse, negocie, busque sua oportunidade de
-  praticar e aprender o que é mais difícil para você.
+## 5. Produto
 
-* Vocês apenas poderão trabalhar em uma história por vez. Não avancem para a
-  próxima sem completar a anterior. As histórias apenas são concluídas quando se
-  completam **todos** os critérios de aceitação + **toda** sua definição de
-  pronto.
+### 5.1a Boilerplate
 
-Para começar, você precisará criar um _fork_ e _clone_ deste repositório.
+Neste projeto foi utilizada a ferramenta [Vite](https://vitejs.dev/) 
 
-## 5. Critérios de aceitação mínimos do projeto
+### 5.1 Definição do produto
 
-### 5.1 Boilerplate
+O produto foi desenvolvido para estudantes e profissionais de TI que se identificam
+com o gênero feminino ou não binário.
 
-Este projeto não inclui um _boilerplate_, portanto você terá que definir a
-estrutura de pastas e escrever seus próprios testes unitários (_tests_). Para
-isso, você pode guiar-se por meio de projetos anteriores.
-Este projeto não inclui um _boilerplate_ completo, apenas alguns arquivos de
-configuração básica, então você terá que definir a estrutura de pastas e
-escrever seus próprios testes de unidade (_tests_). Para isso, você pode ser guiado
-por projetos anteriores e/ou organizar os arquivos seguindo uma estrutura de
-[Model-View-Controller](https://developer.mozilla.org/es/docs/Glossary/MVC).
+A solução proposta pela ConectAdas é a criação de um ambiente para oferecer e pedir por orientação,
+dar e receber dicas de programação e outros assuntos, 
+promover a criação de vínculos e a comunicação em geral.
+O objetivo da ConectAdas não é substituir a participação em espaços mistos, como fórums e outras
+redes sociais, mas sim criar um espaço para exercitar o fortalecimento na expressão de ideias, a confiança
+e a assertividade.
 
-Neste projeto vamos utilizar uma ferramenta chamada
-[Vite](https://vitejs.dev/) para empacotar nossos módulos e iniciar
-o servidor de desenvolvimento, que disponibiliza nossos arquivos usando
-a estratégia `Hot Module Replacement`
-[(HMR)](https://vitejs.dev/guide/features.html#hot-module-replacement),
-isso significa que quando você faz alterações em arquivos que estão sendo
-hosteados, o navegador será atualizado automaticamente sem a necessidade
-de fazê-lo manualmente para recarregar todo o site. Você deve ter um
-cuidado especial para não ter nenhuma _dependência circular_ em seu código já
-[que pode causar problemas com o HMR](https://vitejs.dev/guide/troubleshooting.html#full-refresh-occurs-instead-of-hmr).
-(O `eslint-plugin-import` tem a regra
-[import/no-cycle](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-cycle.md)
-que notificará se os tiver.)
 
-### 5.2 Definição do produto
+### 5.2 Histórias de usuário
 
-No `README.md`, conte-nos brevemente como você mapeou as necessidades dos seus
-usuários e como você chegou à definição final do seu produto. É importante que
-detalhe:
+ - História 1: A usuária quer conhecer e acessar a rede social via telefone celular 
+ e para isso precisa se registrar no site. Duas opções devem ser oferecidas: email e senha de 
+ qualquer provedor ou usando os dados do Google.
+ Definição de pronto: Conseguir criar um usuário, logar com e-mail e senha ou com as credenciais
+ do Google, ser direcionada a outra página (timeline) e deslogar. Mensagens de erro devem aparecer quando os seguintes
+ critérios não forem preenchidos:
+  - No Registro: 
+    - email inválido;
+    - senha com menos de 6 caracteres;
+    - um ou ambos os campos vazios.
+  - No Login:
+    - email incorreto;
+    - senha incorreta;
+    - um ou ambos os campos vazios.
+    
+  Os testes unitários e assíncronos para as funções de registro, login com email e senha, login com google e deslogar do firebase devem estar criados.
+  O protótipo de baixa e alta fidelidade para as página de login e registro versão mobile devem estar prontos.
 
-* Quem são os principais usuários do produto.
-* Qual problema o produto resolve/para que ele serve para esses usuários.
-
-### 5.3 Histórias de usuário
 
 Depois de entender as necessidades de seus usuários, escreva as Histórias de
 Usuário. Elas representam tudo o que ele precisa fazer/ver na Rede Social.
