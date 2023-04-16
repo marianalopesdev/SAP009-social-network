@@ -53,15 +53,15 @@ export default () => {
 
     if (email !== '' && password !== '' && name !== '') {
       createUserWithEmail(email, password, name)
-        .then((isRegistered) => {
-          console.log(isRegistered);
+        .then(() => {
+          // console.log(isRegistered);
           window.location.replace('#login');
         })
         .catch((error) => {
           showErrorMessage(error);
         })
         .finally(() => {
-          console.log('Processo de autenticação finalizado em login.');
+          // console.log('Processo de autenticação finalizado em login.');
         });
     } else {
       errorLabel.innerHTML = 'Preencha todos os campos';

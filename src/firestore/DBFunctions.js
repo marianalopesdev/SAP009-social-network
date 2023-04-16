@@ -1,6 +1,6 @@
 /* eslint-disable no-use-before-define */
 import {
-  getDocs, collection, addDoc, updateDoc, doc, deleteDoc,getDoc, query, where
+  getDocs, collection, addDoc, updateDoc, doc, deleteDoc, getDoc,
 } from 'firebase/firestore';
 
 import { db } from './firestore.js';
@@ -21,9 +21,7 @@ export const createNewPost = async (title, textPost) => {
     timestamp: new Date().getTime(),
   };
 
-  const docReference = await addDoc(collection(db, 'posts'), post);
-  post.id = docReference.id;
-  return getAllUsersPosts();
+  await addDoc(collection(db, 'posts'), post);
 };
 
 export const updatePost = async (title, textPost, postId) => {
@@ -64,7 +62,7 @@ export const getAllUsersPosts = async () => {
     data.id = post.id;
     allPosts.push(data);
   });
-  console.log('getalluserspost')
+  // console.log('getalluserspost');
   return allPosts;
 };
 
@@ -72,9 +70,6 @@ export const getLoggedUserLikes = async () => {
   const userDocReference = doc(db, 'users', auth.currentUser.uid);
   const userDoc = await getDoc(userDocReference);
   const userLikes = userDoc.data().likes || [];
-  
- // const likedPosts = [];
-  
   const postDocRefs = userLikes.map((postId) => doc(db, 'posts', postId));
   const postDocs = await Promise.all(postDocRefs.map(getDoc));
   const likedPosts = postDocs
@@ -84,9 +79,8 @@ export const getLoggedUserLikes = async () => {
       postData.id = postDoc.id;
       return postData;
     });
-  
 
-  console.log(likedPosts);
+  // console.log(likedPosts);
   return likedPosts;
 };
 
