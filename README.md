@@ -8,10 +8,9 @@
 * [4. Considerações gerais](#4-considerações-gerais)
 * [5. Critérios de aceitação mínimos do
   projeto](#5-criterios-de-aceitação-mínimos-do-projeto)
-* [6. Hacker edition](#6-hacker-edition)
+
 * [7. Entrega](#7-entrega)
-* [8. Guias, dicas e leituras
-  complementares](#8-guias-dicas-e-leituras-complementares)
+
 
 ***
 
@@ -137,10 +136,6 @@ e aprendi muito ao dar explicações. Ajudei colegas em outros dias também.
 
 ## 5. Produto
 
-### 5.1a Boilerplate
-
-Neste projeto foi utilizada a ferramenta [Vite](https://vitejs.dev/) 
-
 ### 5.1 Definição do produto
 
 O produto foi desenvolvido para estudantes e profissionais de TI que se identificam
@@ -157,11 +152,11 @@ e a assertividade.
 ### 5.2 Histórias de usuário
 
  - História 1: A usuária quer conhecer e acessar a rede social via telefone celular 
- e para isso precisa se registrar no site. Duas opções devem ser oferecidas: email e senha de 
- qualquer provedor ou usando os dados do Google.
+ e para isso precisa se registrar no site. 
+ Duas opções devem ser oferecidas: email e senha de qualquer provedor ou usando os dados do Google.
  Definição de pronto: Conseguir criar um usuário, logar com e-mail e senha ou com as credenciais
- do Google, ser direcionada a outra página (timeline) e deslogar. Mensagens de erro devem aparecer quando os seguintes
- critérios não forem preenchidos:
+ do Google, ser direcionada a outra página (timeline) e deslogar. 
+ Mensagens de erro devem aparecer quando os seguintes  critérios não forem preenchidos:
   - No Registro: 
     - email inválido;
     - senha com menos de 6 caracteres;
@@ -170,10 +165,58 @@ e a assertividade.
     - email incorreto;
     - senha incorreta;
     - um ou ambos os campos vazios.
-    
+  
   Os testes unitários e assíncronos para as funções de registro, login com email e senha, login com google e deslogar do firebase devem estar criados.
-  O protótipo de baixa e alta fidelidade para as página de login e registro versão mobile devem estar prontos.
+  Testes de usabilidade devem ser executados e bugs corrigidos.
+  O protótipo de alta fidelidade para as página de login e registro versão mobile devem estar prontos.
 
+ - História 2: A usuária quer buscar e oferecer dicas para as colegas desenvolvedoras através de uma postagem
+ com título.  Para isso ela precisa de campos para inserção de dados e um botão 
+ para enviar essa postagem para o banco de dados Firestore. Precisa também que a timeline exiba todos os 
+ posts de todas as usuárias.
+ Definição de pronto: Criar uma postagem e gravá-la em uma nova coleção (posts) no Firestore. 
+ Adicionar a criação do usuário no Firebase à coleção users no Firestore. 
+ Gravar o id do usuário no documento da coleção posts. 
+ Visualizar na timeline todos os posts criados.
+  Mensagens de erro devem aparecer quando os seguintes critérios não forem preenchidos:
+  - Na criação do post: 
+    - um ou ambos os campos vazios.
+  
+  Os testes unitários e assíncronos para as funções de criar post deve estar criado.
+  Testes de usabilidade devem ser executados e bugs corrigidos.
+  O protótipo de alta fidelidade para a timeline principal deve estar pronto.
+
+ - História 3: A usuária quer editar ou apagar as postagens que criou.
+ Definição de pronto: Conseguir editar ou apagar uma postagem criada anteriormente. 
+ Fazer o update ou delete no banco de  dados do Firebase. 
+ Mensagens de erro devem aparecer quando os seguintes critérios não forem preenchidos:
+  - Na edição do post: 
+    - um ou ambos os campos vazios.
+  
+  Os testes unitários e assíncronos para as funções de editar e apagar posts devem estar criados.
+  Testes de usabilidade devem ser executados e bugs corrigidos.
+  O protótipo de alta fidelidade para o modal de edição e confirmação de exclusão devem estar prontos.
+
+ - História 4: A usuária quer ver apenas as postagens que criou.
+ Definição de pronto: Exibir timeline apenas com os posts da usuária.
+  
+  - História 5: A usuária quer curtir as postagens que tem interesse.
+ Definição de pronto: Conseguir curtir e descutir uma postagem. O documento da coleção users 
+ recebe o id dos posts que curte. O documento da coleção posts recebe o id do usuário que curtiu e
+ adiciona à array de curtidas.
+  
+  Os testes unitários e assíncronos para as funções de like e deslike devem estar criados.
+  Testes de usabilidade devem ser executados e bugs corrigidos.
+
+ - História 6: A usuária quer ver as postagens que curtiu.
+ Definição de pronto: Exibir uma timeline com os itens curtidos pela usuária, em ordem de curtida.
+ Testes de usabilidade devem ser executados e bugs corrigidos.
+ 
+  - História 6: A usuária quer utilizar o site na versão desktop.
+ Definição de pronto: Exibir o site configurado para a versão desktop.
+ Testes de usabilidade devem ser executados e bugs corrigidos.
+ 
+ 
 
 Depois de entender as necessidades de seus usuários, escreva as Histórias de
 Usuário. Elas representam tudo o que ele precisa fazer/ver na Rede Social.
@@ -188,14 +231,10 @@ Cada uma de suas histórias de usuário deve possuir:
   incluir esses aspectos em sua definição de pronto (além de tudo o que precisa
   adicionar):
 
-  - Ser uma SPA.
-  - Ser _responsivo_.
-  - Receber _code review_ de pelo menos uma parceira de outra equipe.
-  - Fazer _tests_ unitários.
-  - Fazer testes manuais buscando erros e imperfeições simples.
-  - Fazer testes de usabilidade e incorporar o _feedback_ dos usuários como
-    melhorias.
-  - Fazer deploy do aplicativo e marcar a versão (git tag).
+  
+  - xxxxxReceber _code review_ de pelo menos uma parceira de outra equipe.
+  
+  - xxxxxFazer deploy do aplicativo e marcar a versão (git tag).
 
 ### 5.4 Desenho da Interface de Usuário (protótipo de baixa fidelidade)
 
@@ -204,9 +243,9 @@ aplicativo e, com isso, criar a interface do usuário (UI) que siga este fluxo.
 
 ### 5.5 Responsivo
 
-Deve funcionar bem em dispositivos de tela grande (computadores, laptops etc.) e
-pequena (_tablets_, telefones celulares etc.). Sugerimos seguir a técnica
-[_`mobile first`_](#mobile-first) (mais detalhes sobre essa técnica ao final).
+O site funciona em dispositivos de tela grande (computadores, laptops etc.) e
+pequena (_tablets_, telefones celulares etc.). Foi utilizada a sugerida técnica
+Mobile First.
 
 ### 5.6 Considerações sobre o comportamento da Interface do Usuário (UI)
 
@@ -249,13 +288,12 @@ H.U.:
 
 ### 5.7 Considerações técnicas sobre front-end
 
-* Separar a manipulação do DOM da lógica (separação de responsabilidades).
-* Ter várias telas. Para isso, seu aplicativo deve ser um [Single Page
+* Manipulação do DOM separada da lógica (separação de responsabilidades).
+* [Single Page
   Application
   (SPA)](https://pt.wikipedia.org/wiki/Aplicativo_de_p%C3%A1gina_%C3%BAnica)
-* Alterar e persistir dados. Os dados que você adiciona ou modifica devem
-  persistir por todo o aplicativo. Recomendamos que você use o
-  [Firebase](https://firebase.google.com/) para isso também.
+* Alteração e persistência de dados usando [Firebase](https://firebase.google.com/).
+* Neste projeto foi utilizada a ferramenta [Vite](https://vitejs.dev/) 
 
 #### Testes unitários
 
@@ -273,20 +311,6 @@ H.U.:
 * Verifique se a implementação do código segue as diretrizes do protótipo.
 * Faça sessões de teste de usabilidade com o produto em HTML.
 
-## 6. Hacker Edition
-
-As seções chamadas _Hacker Edition_ são **opcionais**. Se **você terminou** e
-cumpriu todos os requisitos acima e sobrou tempo, tente concluí-las. Dessa
-forma, você pode aprofundar e/ou exercitar mais os objetivos de aprendizagem do
-projeto.
-
-* Criar posts com imagens.
-* Procurar usuários, adicionar e excluir "amigos".
-* Definir a privacidade de _posts_ (público ou apenas para amigos).
-* Permitir ver na linha do tempo de usuários "não amigos" apenas os posts
-  públicos.
-* Permitir comentar ou responder a uma postagem.
-* Editar perfil.
 
 ## 7. Entrega
 
@@ -296,61 +320,3 @@ interface será exibida usando páginas do GitHub ou outro serviço de hospedage
 Verifica a [Documentação Vite](https://vitejs.dev/guide/static-deploy.html)
 para orientá-lo sobre isso.
 
-***
-
-## 8. Guias, dicas e leituras complementares
-
-### Mobile first
-
-O conceito de [_mobile
-first_](https://tableless.com.br/mobile-first-a-arte-de-pensar-com-foco/) faz
-referência a um processo de desenho e desenvolvimento que parte de como se vê e
-como funciona uma aplicação primeiro em um dispositivo móvel e mais adiante se
-analisa como adaptar a aplicação à telas progressivamente maiores. Esta é uma
-contraposição ao modelo tradicional, no qual primeiro se desenha os websites (ou
-webapps) para desktops e depois os adaptam para telas menores.
-
-A motivação aqui é se assegurar que desde o começo sejam desenhadas telas
-_responsivas_. Dessa forma, começamos com a aparência e o comportamento do
-aplicativo em uma tela e ambiente móvel.
-
-### Múltiplas telas
-
-Em projetos anteriores, nossas aplicações eram compostas de apenas uma tela
-_principal_ (uma só _página_). Neste projeto, precisaremos dividir nossa
-interface em várias _views_ ou _pages_ e oferecer uma maneira de navegar entre
-essas telas. Esse problema pode ser resolvido de várias maneiras: com arquivos
-HTML independentes (cada um com seu próprio URL) e links tradicionais; mantendo
-na memória e renderizando condicionalmente (sem atualizar a página);
-[manipulando o histórico do
-navegador](https://developer.mozilla.org/pt-BR/docs/Web/API/History_API)
-com
-[`window.history`](https://developer.mozilla.org/es/docs/Web/API/Window/history).
-Neste projeto, convidamos você a explorar opções e decidir sobre uma opção de
-implementação.
-
-### Gravação de dados
-
-Nos projetos anteriores, consumimos dados, mas ainda não tínhamos escrito dados
-(salvar alterações, criar dados, excluir, etc). Neste projeto, você precisará
-criar (salvar) novos dados, além de ler, atualizar e modificar os dados
-existentes. Esses dados podem ser salvos remotamente usando o
-[Firebase](https://firebase.google.com/).
-
-Para usar o Firebase, você deve criar um projeto no [console](https://console.firebase.google.com/) do Firebase e
-instale a dependência `firebase` usando `npm`.
-Leia [instruções passo a passo aqui](https://firebase.google.com/docs/web/setup).
-
-Outras:
-
-* [Evento hashchange ](https://developer.mozilla.org/es/docs/Web/API/Window/hashchange_event)
-* [Mobile
-  First](https://tableless.com.br/mobile-first-a-arte-de-pensar-com-foco/)
-* [Mobile First Is NOT Mobile Only - Nielsen Norman
-  Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/)
-* [Flexbox - CSS
-  Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [Módulos:
-  Export](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
-* [Módulos:
-  Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
