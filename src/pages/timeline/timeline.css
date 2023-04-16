@@ -1,3 +1,4 @@
+ /* eslint-disable */ 
 /* body{
   background-color: #eaeaea;
 } */
@@ -45,9 +46,30 @@
   user-select: none;
 }
 
-.menu-links {
+.div-menu-links {
   display: none;
+  padding-right: 1.5rem;
 }
+
+.menu-links {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  list-style: none;
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+  gap: 2.2rem;
+}
+
+.menu-links a {
+  display: flex;
+  list-style: none;
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
 
 
 .display{
@@ -57,6 +79,17 @@
 .no-display{
   display: none;
 } 
+
+.edit-button span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.delete-button span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 
 #menuToggle a {
   text-decoration: none;
@@ -219,7 +252,6 @@ p {
 }
 
 .post {
-  width: 18rem;
   background-color: aquamarine;
   margin-bottom: 1.5rem;
   width: 100%;
@@ -276,6 +308,8 @@ h2 {
 .delete-button {
   background-color: #ff4f5a;
   margin-right: 1rem;
+  border: none;
+  cursor: pointer;
 }
 
 .edit-button {
@@ -288,21 +322,8 @@ h2 {
   display: none;
 }
 
-.delete-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
 
-.edit-button span {
-  display: inline-block;
-  vertical-align: middle;
-}
 
-.delete-button span {
-  display: inline-block;
-  vertical-align: middle;
-}
 
 .modal-container-delete {
   display: flex;
@@ -664,11 +685,12 @@ h2 {
     border-radius: 1rem;
     overflow-y: hidden;
     border: #04ddcc;
+    border-style: solid;
       border-top-style: none;
       border-right-style: none;
       border-bottom-style: none;
       border-left-style: none;
-    border-style: solid;
+   
     background-color: #eaeaea;
   }
 
@@ -703,8 +725,8 @@ h2 {
   align-content: baseline ;
 }
 
-.div-modal-close{
-}
+/* .div-modal-close{
+} */
 
 .form {
   display: flex;
@@ -843,10 +865,10 @@ h2 {
     background-color: #EAEAEA;
 }
 
-.div-greeting-button{
-  width: 90vw;
-  /* background-color: red; */
-}
+/* .div-greeting-button{
+  
+  /* background-color: red; 
+} */
 
   .div-logo-timeline {
     padding-left: 1.5rem;

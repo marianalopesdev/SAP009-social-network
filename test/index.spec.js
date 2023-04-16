@@ -1,7 +1,8 @@
 /* eslint-disable */
 import { signIn, loginGoogle, LogOut, createUserWithEmail, auth } from '../src/firebase/auth';
 import { signInWithEmailAndPassword, signInWithPopup, signOut, createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
-
+import { doc, getDoc, db, addDoc, collection } from 'firebase/firestore';
+import { createNewPost } from '../src/firestore/DBFunctions';
 jest.mock('firebase/auth');
 
 
@@ -9,6 +10,8 @@ jest.mock('firebase/auth');
 afterEach(() => {
   jest.clearAllMocks();
 });
+
+jest.mock('firebase/firestore');
 
 // jest.mock('firebase/auth', () => ({
 //    getAuth: jest.fn(),
@@ -18,6 +21,23 @@ afterEach(() => {
 //   // signInWithPopup: jest.fn(),
 //   // sendPasswordResetEmail: jest.fn(),
 // }));
+
+jest.mock('firebase/auth', () => ({
+  getAuth: jest.fn(() => ({
+    currentUser: {
+      uid: '5555',
+      displayName: 'Usuário de teste',
+    },
+  })),
+  GoogleAuthProvider: jest.fn(),
+  signInWithEmailAndPassword: jest.fn(),
+  createUserWithEmailAndPassword: jest.fn(),
+  signInWithPopup: jest.fn(),
+  sendPasswordResetEmail: jest.fn(),
+  updateProfile: jest.fn(),
+  signOut: jest.fn(),
+  onAuthStateChanged: jest.fn(),
+}));
 
 describe('signIn', () => {
   it('returns true when the user successfully logs in', async () => {
@@ -62,7 +82,8 @@ describe('loginGoogle', () => {
     signInWithPopup.mockResolvedValueOnce({});
     const result = await loginGoogle('valid-email', 'valid-password');
     expect(signInWithPopup).toHaveBeenCalledTimes(1);
-    expect(signInWithPopup).toHaveBeenCalledWith(undefined, {});// CALLS 2 TIMES. PQ???
+    // expect(getDoc).toHaveBeenCalledWith(doc(db, 'users', getAuth().currentUser.uid));
+    expect(signInWithPopup).toHaveBeenCalledWith(undefined, {});
     expect(result).toBe(true);
     
   });
@@ -76,7 +97,7 @@ describe('loginGoogle', () => {
     
      expect(signInWithPopup).toHaveBeenCalledTimes(1);
      //jest.clearAllMocks();
-     expect(signInWithPopup).toHaveBeenCalledWith(undefined, {}); // CALLS 2 TIMES. PQ???
+     expect(signInWithPopup).toHaveBeenCalledWith(undefined, {}); 
 
      expect(error).toEqual(new Error(mockedError));      
    }    
@@ -114,5 +135,28 @@ describe('logOut', () => {
     // }    
     
   });
-});
 
+})
+  
+
+  
+  describe('Função newPost', () => {
+    it('deve criar um post e guardar na coleção', async () => {
+      addDoc.mockResolvedValueOnce();
+      const mockCollection = 'collection';
+      collection.mockReturnValueOnce(mockCollection);
+
+      const title = '1jsjsj'
+      const postText = 'jdjdjdj';
+    
+     
+      
+
+      await createNewPost(title, postText);
+
+      expect(addDoc).toHaveBeenCalledTimes(1);
+     // expect(addDoc).toHaveBeenCalledWith(mockCollection, posts);
+      expect(collection).toHaveBeenCalledTimes(1);
+      expect(collection).toHaveBeenCalledWith(undefined, 'posts');
+    });
+  });

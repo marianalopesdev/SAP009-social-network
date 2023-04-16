@@ -1,4 +1,5 @@
-import { doc } from 'firebase/firestore';
+/* eslint-disable no-alert */
+/* eslint-disable import/no-cycle */
 import {
   createNewPost,
   updatePost,
@@ -129,7 +130,7 @@ export async function editPost(post) {
     if (inputTitle !== '' && inputTextPost !== '') {
       await updatePost(inputTitle, inputTextPost, post.id);
       modalWrapper.classList.remove('show');
-      console.log('Função executada após a edição do post na pagina post.');
+      // console.log('Função executada após a edição do post na pagina post.');
       const lastPosts = document.querySelector('#last-posts');
       const userFavorites = document.querySelector('#user-favorites');
       const userPosts = document.querySelector('#user-posts');

@@ -1,7 +1,8 @@
+/* eslint-disable */ 
 import { auth } from '../../firebase/auth.js';
 import Header from '../../components/header.js';
 import {
-  deletePost, getAllUsersPosts, getLoggedUserAllPosts, getLoggedUserLikes, likePosts
+  deletePost, getAllUsersPosts, getLoggedUserAllPosts, getLoggedUserLikes, likePosts,
 } from '../../firestore/DBFunctions';
 // import errorHandling from '../errorHandling.js';
 import { editPost, openCreateNewPostModal } from '../posts/posts.js';
@@ -113,18 +114,7 @@ export default () => {
         </article>`,
         )
         .join('');
-      //         <div class="div-action-buttons">
-      //         <div id="div-like" class="div-like">
-      //       <button type='button' id='like-button-${post.id}' class='like-button'>
-      //        ${post.likes.find(like => like.uid === auth.currentUser.uid)  ? `<span class="material-icons like">
-      //       star_border
-      //       </span> ` : `<span class="material-icons like">
-      //       star
-      //       </span>`}
-      //        </button>
-
-      //       <label id='like-labl' class="like-label">${post.likes.length}</label>
-      //       </div>
+ 
       // //<label id='like-label' class="like-label">${post.likes}</label> 
       // PARA O SONHO DE MOSTRAR QUEM CURTIU
       const likeButtons = postsList.querySelectorAll('.like-button');
