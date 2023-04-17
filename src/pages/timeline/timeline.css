@@ -70,16 +70,6 @@
 }
 
 
-
-
-.display{
-  display: block;
-}
-
-.no-display{
-  display: none;
-} 
-
 .edit-button span {
   display: inline-block;
   vertical-align: middle;
@@ -985,6 +975,21 @@ h2 {
   .post-article {
     width: 50rem;
   }
+
+  .div-menu-links {
+    display: block;
+    padding-right: 1.5rem;
+  }
+  
+  #menuToggle {
+ 
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    display: none;
+  }
+  
 
 
 }
