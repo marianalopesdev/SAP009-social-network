@@ -1,0 +1,16 @@
+.container-about {
+    width: 80vw;
+    align-items: center;
+    background-color: orange;
+  }
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+    background-color: aqua;
+    height: 100vh;
+    padding-top: 10rem;
+  }

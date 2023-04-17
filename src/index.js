@@ -3,6 +3,7 @@ import timeline from './pages/timeline/timeline.js';
 import register from './pages/register/register.js';
 import { auth, verifyUserLogged } from './firebase/auth';
 import { redirectToPage } from './redirectToPage.js';
+import about from './pages/about/about.js';
 
 const main = document.querySelector('#root');
 
@@ -13,6 +14,9 @@ const init = () => {
       break;
     case '#register':
       main.appendChild(register());
+      break;
+    case '#about':
+      main.appendChild(about());
       break;
     default:
       main.appendChild(login());

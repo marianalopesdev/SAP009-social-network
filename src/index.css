@@ -1,6 +1,8 @@
 @import './pages/login/login.css';
 @import './pages/register/register.css';
 @import './pages/timeline/timeline.css';
+@import './pages/about/about.css';
+@import './pages/posts/posts.css';
 
 *{
     margin: 0;

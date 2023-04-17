@@ -11,7 +11,7 @@ export default () => {
     <nav role="navigation">
     <div class="div-menu-links"> <ul id="menu-links" class="menu-links">
     <li><a href="#timeline">Home</a></li>
-    <li><a href="#">Sobre</a></li>
+    <li><a href="#about">Sobre</a></li>
     <li><a id="menu-sair" href="#">Sair</a></li>
   </ul>
     </div>
@@ -27,7 +27,7 @@ export default () => {
      
       <ul id="menu">
       <li><a href="#timeline">Home</a></li>
-      <li><a href="#">Sobre</a></li>
+      <li><a href="#about">Sobre</a></li>
       <li><a id="menu-sair" href="#">Sair</a></li>
     </ul>
     
