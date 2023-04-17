@@ -1,9 +1,9 @@
 export const firebaseConfig = {
-  apiKey: 'AIzaSyDc4KK7IGD7BdujiCKD-9PsyhpALWpVUbo',
-  authDomain: 'conectadas-138d8.firebaseapp.com',
-  projectId: 'conectadas-138d8',
-  storageBucket: 'conectadas-138d8.appspot.com',
-  messagingSenderId: '984687453325',
-  appId: '1:984687453325:web:35de2f1ae5a2c7bc312ec4',
-  measurementId: 'G-9P12LKT9TK',
+  apiKey: 'AIzaSyDQnyBdJB5d3ELTDxFDHKUjfJSY8QwjtN0',
+  authDomain: 'conectadaslab.firebaseapp.com',
+  projectId: 'conectadaslab',
+  storageBucket: 'conectadaslab.appspot.com',
+  messagingSenderId: '1062147002450',
+  appId: '1:1062147002450:web:072c8810c6ab69f4698f8b',
+  measurementId: 'G-CKLP8JLDKQ',
 };

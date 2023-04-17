@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: red;
+  
   justify-items: center;
   align-content: center;
   height: 100vh;
@@ -306,10 +306,10 @@ h2 {
 }
 
 .delete-button {
-  background-color: #ff4f5a;
   margin-right: 1rem;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .edit-button {
@@ -404,13 +404,14 @@ h2 {
 }
 
 .material-icons.edit {
-  color: #04ddcc;
+  color: #323232;
 }
 .material-icons.delete {
   color: #323232;
+  border: none;
 }
 .material-icons.like {
-  color: #ea4fff;
+  color: #04ddcc;
 }
 .material-icons.close {
   color: #ff4f5a;
@@ -423,9 +424,23 @@ h2 {
   color: #323232;
   
 }
+
+#modal-edit-close-icon {
+  border-radius: 0.5rem;
+  border: none;
+  background-color: transparent;
+
+}
 #modal-close-icon{
   border-radius: 0.5rem;
   border: none;
+  background-color: transparent;
+}
+
+#modal-close-icon{
+  border-radius: 0.5rem;
+  border: none;
+  background-color: transparent;
 }
 
 
@@ -627,7 +642,7 @@ h2 {
 /*edit posts */
 
 .edit-input-post-title {
-  height: 4rem;
+  height: 3rem;
   border-radius: 1rem;
   border: none;
   outline-color: #ff4f5a;
@@ -649,7 +664,7 @@ h2 {
   padding-left: 1rem;
   padding-bottom: 4rem;
   word-wrap: break-word;
-  height: 9rem;
+  height: 7rem;
   font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
 }
@@ -686,11 +701,7 @@ h2 {
     overflow-y: hidden;
     border: #04ddcc;
     border-style: solid;
-      border-top-style: none;
-      border-right-style: none;
-      border-bottom-style: none;
-      border-left-style: none;
-   
+     
     background-color: #eaeaea;
   }
 
@@ -832,7 +843,7 @@ h2 {
 }
   }
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 500px) {
   /* .container-postList{
     width: 60rem;
   }
@@ -844,6 +855,33 @@ h2 {
     justify-content: center;
     align-items: centers;
   } */
+  .edit-input-post-title {
+    height: 4rem;
+    border-radius: 1rem;
+    border: none;
+    outline-color: #ff4f5a;
+    background-color: #FFFFFF;
+    width: 100%;
+    margin-bottom: 1.3rem;
+    padding-left: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+  }
+  
+  .edit-input-post-text {
+    
+    border-radius: 1rem;
+    border: none;
+    outline-color: #ff4f5a;
+    background-color: #FFFFFF;
+    width: 100%;
+    padding-left: 1rem;
+    padding-bottom: 4rem;
+    word-wrap: break-word;
+    height: 9rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+  }
       
     }
 
@@ -956,7 +994,7 @@ h2 {
   .container-timeline {
     width: 80vw;
     align-items: center;
-    background-color: pink;
+    background-color: yellow;
   }
 
   .post-list {

@@ -86,6 +86,7 @@ export async function editPost(post) {
       <p class="greeting-modal">Editar Post</p>   
       </div>
       <div class="div-modal-close">
+    
       <button class="buttons" id="modal-edit-close-icon"><span class="material-icons close-modal">
       close
       </span></button>
