@@ -40,31 +40,6 @@ export default () => {
   `;
 
   headerContent.innerHTML += template;
-
-  const menuToggle = headerContent.querySelector('#menuToggle');
-  const menu = headerContent.querySelector('.div-menu-links');
-
-  if (window.innerWidth > 768) {
-    menu.classList.add('display');
-    menuToggle.classList.add('no-display');
-  }
-
-  // Verifica a largura da tela qdo a pág  carrega e adiciona ou remove a classe conforme necessário
-
-  // window.addEventListener('resize', () => {
-  //   if (window.innerWidth > 768) {
-  //     menuToggle.classList.remove("display");
-  //     menuToggle.classList.add("no-display");
-
-  //   } else {
-  //     menuToggle.classList.remove("no-display");
-  //     menuToggle.classList.add("display");
-  //     menu.classList.remove("display");
-  //     menu.classList.add("no-display");
-
-  //   }
-  // });
-
   document.body.addEventListener('click', () => {
     const link = document.getElementById('menu-sair');
     if (link) {
