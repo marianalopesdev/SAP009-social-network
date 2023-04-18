@@ -46,8 +46,6 @@ export default () => {
       LogOut();
     }
   });
-  
-  
 
   return headerContent;
 };

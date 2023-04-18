@@ -3,14 +3,19 @@ import {
   getDocs, collection, addDoc, updateDoc, doc, deleteDoc, getDoc,
 } from 'firebase/firestore';
 
+import { getAuth } from 'firebase/auth';
+
 import { db } from './firestore.js';
 
 import { auth } from '../firebase/auth';
 
+import { app } from '../firebase/app.js';
+
 export const createNewPost = async (title, textPost) => {
+  const authentication = getAuth(app);
   const post = {
-    uid: auth.currentUser.uid,
-    displayName: auth.currentUser.displayName,
+    uid: authentication.currentUser.uid,
+    displayName: authentication.currentUser.displayName,
     title,
     textPost,
     dateTime: new Date().toLocaleTimeString([], {
