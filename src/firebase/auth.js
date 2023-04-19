@@ -70,29 +70,54 @@ export function signIn(email, password) {
 const provider = new GoogleAuthProvider();
 // console.log(provider);
 
-export function loginGoogle() {
-  return new Promise((resolve, reject) => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        // const token = credential.accessToken;
-        // const user = result.user;
-        resolve(true);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-       // const email = error.customData.email;
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        console.log(error.message);
-        reject(new Error(error.message));        
-        return false;
-      })
-      .finally(() => {
-        console.log('Login pelo Google finalizado em auth.');
-      });
-  });
-}
+
+
+  export function loginWithGoogleCredentials() {
+    return new Promise((resolve, reject) => {
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const authg = getAuth(app);
+          const credential = GoogleAuthProvider.credentialFromResult(result);
+          const userGoogle = result.user;
+          const userRefFirestore = doc(db, 'users', authg.currentUser.uid);
+    // Verificar se o usuário já fez login com o Google antes
+          getDoc(userRefFirestore).then((doc) => {
+            if (doc.exists()) {
+              // O usuário já fez login com o Google antes, então não precisamos fazer nada aqui
+              console.log('Usuário já fez login com o Google antes.');
+              resolve(true);
+            } else {
+              // O usuário está fazendo login com o Google pela primeira vez, então vamos salvar seus dados no Firestore
+              const user = {
+                email: userGoogle.email,
+                name: userGoogle.displayName,
+              };
+              setDoc(userRefFirestore, {
+                ...user
+              }).then(() => {
+                console.log('Dados do usuário salvos no Firestore.');
+                resolve(true);
+              });
+            }
+          });
+          resolve(true);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+         // const email = error.customData.email;
+          const credential = GoogleAuthProvider.credentialFromError(error);
+          console.log(error.message);
+          reject(new Error(error.message));        
+          return false;
+        })
+        .finally(() => {
+          console.log('Login pelo Google finalizado em auth.');
+        });
+    });
+  }
+  
+
 
 export function LogOut(user) {
  return signOut(auth)

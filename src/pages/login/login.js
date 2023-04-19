@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { signIn, loginGoogle  } from '../../firebase/auth.js';
+import { signIn, loginWithGoogleCredentials  } from '../../firebase/auth.js';
 import { showErrorMessage } from '../errorHandling.js';
 
 export default () => {
@@ -84,7 +84,7 @@ export default () => {
   });
 
   loginWithGoogle.addEventListener('click', () => {
-    loginGoogle()
+    loginWithGoogleCredentials()
       .then((isAuthenticated) => {
         console.log('google: Usuário autenticado em login!');
         window.location.replace('#timeline');
