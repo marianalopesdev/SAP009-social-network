@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { signIn, loginGoogle, LogOut, createUserWithEmail, auth } from '../src/firebase/auth';
+import { signIn, loginWithGoogleCredentials, LogOut, createUserWithEmail, auth } from '../src/firebase/auth';
 import { signInWithEmailAndPassword, signInWithPopup, signOut, createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import { doc, getDoc, db, addDoc, collection } from 'firebase/firestore';
 import { createNewPost } from '../src/firestore/DBFunctions';
@@ -61,10 +61,11 @@ describe('signIn', () => {
 });
 
 
-describe('loginGoogle', () => {
+
+describe('loginWithGoogleCredentials', () => {
   it('returns true when the user successfully logs in using Google Credencials', async () => {
     signInWithPopup.mockResolvedValueOnce({});
-    const result = await loginGoogle('valid-email', 'valid-password');
+    const result = await loginWithGoogleCredentials();
     expect(signInWithPopup).toHaveBeenCalledTimes(1);
     // expect(getDoc).toHaveBeenCalledWith(doc(db, 'users', getAuth().currentUser.uid));
     expect(signInWithPopup).toHaveBeenCalledWith(undefined, {});
@@ -76,7 +77,7 @@ describe('loginGoogle', () => {
    const mockedError = 'auth/user-not-found';
    signInWithPopup.mockRejectedValueOnce({ message: mockedError });
    try {
-     await loginGoogle('invalid-email', 'password');
+     await loginWithGoogleCredentials();
    } catch (error) {
     
      expect(signInWithPopup).toHaveBeenCalledTimes(1);
